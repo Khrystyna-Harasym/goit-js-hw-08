@@ -26,7 +26,7 @@ function onInput() {
     };
       localStorage.setItem('feedback-form-state', JSON.stringify(value));
 }
-saveData();
+
 function saveData() {
   let info = JSON.parse(localStorage.getItem('feedback-form-state'));
   if (info) {
