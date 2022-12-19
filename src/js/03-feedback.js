@@ -14,6 +14,7 @@ obj.form.addEventListener('input', throttle(onInput, 500));
 function onSubmit(e) {
     e.preventDefault();
     e.currentTarget.reset();
+    console.log(localStorage.getItem('feedback-form-state'));
     localStorage.removeItem('feedback-form-state');
     
 
