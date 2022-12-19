@@ -13,9 +13,8 @@ function onSubmit(e) {
     e.preventDefault();
     e.currentTarget.reset();
 
-    console.log(localStorage.getItem('feedback-form-state'));
-
     localStorage.removeItem('feedback-form-state');
+    formData ={};
 
 }
 
@@ -27,12 +26,13 @@ function onInput() {
       localStorage.setItem('feedback-form-state', JSON.stringify(value));
 }
 
+saveData();
 function saveData() {
   let info = JSON.parse(localStorage.getItem('feedback-form-state'));
   if (info) {
     obj.email.value = info.email || "";
     obj.message.value = info.message || "";
+    formData = info;
   }
 }
 
-saveData();
