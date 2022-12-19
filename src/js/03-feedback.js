@@ -14,7 +14,7 @@ function onSubmit(e) {
     e.currentTarget.reset();
 
     localStorage.removeItem('feedback-form-state');
-    formData ={};
+  
 
 }
 
@@ -32,7 +32,7 @@ function saveData() {
   if (info) {
     obj.email.value = info.email || "";
     obj.message.value = info.message || "";
-    formData = info;
+  
   }
 }
 
