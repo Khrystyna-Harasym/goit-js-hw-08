@@ -30,7 +30,7 @@ saveData();
 function saveData() {
   let info = JSON.parse(localStorage.getItem('feedback-form-state'));
   if (info) {
-    email.value = info.email;
-    message.value = info.message;
+    obj.email.value = info.email || "";
+    obj.message.value = info.message || "";
   }
 }
