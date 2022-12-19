@@ -34,3 +34,5 @@ function saveData() {
     obj.message.value = info.message || "";
   }
 }
+
+saveData();
