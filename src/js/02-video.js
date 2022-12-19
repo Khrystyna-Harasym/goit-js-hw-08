@@ -5,14 +5,14 @@ const iframe = document.querySelector('#vimeo-player');
 const player = new Player(iframe);
 const throttle = require('lodash.throttle');
 
-player.on('timeupdate', throttle(onPlay, 1000));
+
 
 const onPlay = function (event) {
   // data is an object containing properties specific to that event
   localStorage.setItem('videoplayer-current-time', event.seconds);
 };
 
-
+player.on('timeupdate', throttle(onPlay, 1000));
 const time = localStorage.getItem('videoplayer-current-time');
 
 player
